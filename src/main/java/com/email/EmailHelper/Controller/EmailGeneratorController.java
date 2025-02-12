@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 public class EmailGeneratorController {
 
-    @Autowired
+//    @Autowired
     private final EmailGeneratorService emailGeneratorService;
 
     @PostMapping("/generate")
@@ -23,3 +23,9 @@ public class EmailGeneratorController {
         return ResponseEntity.ok(response);
     }
 }
+
+// depency injection , type , why automwired worked , didnt worked ?
+// feign , in java =>
+// logger vs sout
+// all anotations
+
