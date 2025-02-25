@@ -14,8 +14,13 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 public class EmailGeneratorController {
 
-//    @Autowired
+    @Autowired
     private final EmailGeneratorService emailGeneratorService;
+
+//    @Autowired  // ✅ This ensures dependency injection
+//    public EmailGeneratorController(EmailGeneratorService emailGeneratorService) {
+//        this.emailGeneratorService = emailGeneratorService;
+//    }
 
     @PostMapping("/generate")
     public ResponseEntity<String> genrateEmail(@RequestBody EmailRequestEntity emailRequestEntity){
