@@ -1,6 +1,9 @@
 # Use a build stage to compile the application
 FROM eclipse-temurin:17-jdk as builder
 
+# Install Maven
+RUN apt-get update && apt-get install -y maven
+
 # Set working directory
 WORKDIR /app
 
