@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/*.jar app.jar
 
 # Expose the port (Render uses PORT environment variable)
-EXPOSE 8080
+EXPOSE 8081
 
 # Run the application
 CMD ["java", "-jar", "app.jar"]
